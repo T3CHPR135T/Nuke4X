@@ -1,18 +1,17 @@
 {
     "manifest_version" : 3,
-    "name" : "Nuker 4X",
-    "version" : "0.1.3",
+    "name" : "Nuke4X",
+    "version" : "0.2",
     "description" : "Hide retards by keyword or emoji!",
     "permissions" : [ "storage", "activeTab" ],
-    "host_permissions" : [ "https://x.com/*" ],
+    "host_permissions" : [ "https://x.com/*", "https://twitter.com/*" ],
     "content_scripts" : [
         {
-            "matches" : ["<all_urls>"],
+            "matches" : [ "https://x.com/*", "https://twitter.com/*" ],
             "js" : [ "content/content.js" ],
             "run_at" : "document_end"
         }
     ],
     "action" : { "default_popup" : "popup.html" },
     "icons" : { "48" : "icon-48.png" }
-
 }
